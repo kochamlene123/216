@@ -1,0 +1,258 @@
+<head>
+    <title>mObywatel</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/card.css?v=1.2">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="icon" type="image/x-icon" href="images/otM5jOA.png">
+    <link rel="apple-touch-icon" href="images/otM5jOA.png">
+    <link rel="shortcut icon" href="images/otM5jOA.png">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <style>
+        .circle-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 24px;
+    }
+    .circle-button {
+      background-color: #2c2c2c;
+      border-radius: 50%;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      border: 1px solid #444;
+    }
+    .circle-button span {
+      margin-top: 6px;
+    }
+
+.box_value, .box_value1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2125;
+    margin: 0;
+    padding: 0;
+
+}
+
+.services_grid {
+    display: flex;
+    justify-content: flex-start; /* lub space-between */
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    overflow-x: auto; /* POZWALA przewijać poziomo na małych ekranach */
+    max-width: auto;
+    float: left;
+    padding-bottom: 0px;
+}
+
+
+.service_box {
+    flex: 1 1 20%;
+    min-width: 0px;
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding-bottom: 0px;
+}
+
+.service_box_icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    margin: 0px;
+}
+
+
+.service_box_name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1f2125;
+    line-height: 1.2;
+    min-height: 3em; /* zapewnia równe wysokości tekstu */
+    padding-bottom: 0px;
+}
+
+.confirm_box{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.other_grid{
+    padding-top: auto;
+}
+
+.action_grid{
+    margin-right: 60px;
+}
+
+.title_text{
+    width: auto;
+}
+
+.top_grid{
+    display: flex;
+}
+
+    </style>
+</head>
+<body>
+    <div class="top_grid">
+        <div class="action_grid">
+            <img src="images/BDZT6fX.png" class="back_img">
+            <p onclick="sendTo('card')" class="back_text">Wróć</p>
+        </div>
+        <p class="title_text">Dane dowodu osobistego</p>
+    </div>
+
+    <div class="bottom_bar">
+        <div class="bottom_bar_grid">
+            <div class="bottom_element_grid" send="home">
+                <div class="bottom_element_image home_open"></div>
+                <p class="bottom_element_text">Pulpit</p>
+            </div>
+            <div class="bottom_element_grid" send="documents">
+                <div class="bottom_element_image documents"></div>
+                <p class="bottom_element_text open">Dokumenty</p>
+            </div>
+            <div class="bottom_element_grid" send="services">
+                <div class="bottom_element_image services"></div>
+                <p class="bottom_element_text">Usługi</p>
+            </div>
+            <div class="bottom_element_grid" send="qr">
+                <div class="bottom_element_image qr"></div>
+                <p class="bottom_element_text">Kod QR</p>
+            </div>
+            <div class="bottom_element_grid" send="more">
+                <div class="bottom_element_image more"></div>
+                <p class="bottom_element_text">Więcej</p>
+            </div>
+        </div>
+    </div>
+    <p class="time_text" id="time" style="color: #f5f6fb; margin-bottom: 0px; margin-top: 40px;"></p>
+    
+    
+    
+    <div class="other_grid" style="margin-top: 0px; margin-bottom: 10px; height: 500px;">
+        <!-- Pierwszy bottom_holder z tabelką z danymi dokumentu -->
+        <div class="bottom_holder" style="height: auto">
+            
+                <!-- Seria i numer -->
+                <div class="confirm_box" style="border: none;">
+                    <p class="box_top">Seria i numer</p>
+                    <b><p class="box_value" id="seria_numer" style="font-size: 25px;"></p></b>
+                    <button class="main_button">Kopiuj</button>
+                </div>
+                <div class="confirm_box" style="margin-bottom: 20px;">
+                    <p class="box_top">Status</p>
+                    <div>
+                        <p class="box_value" style="font-size: 22px; width: 330px; height: 31px;"> <img src="images/st.png" alt="" style="height: 31px; width: 31px; vertical-align: middle;">  Wydany</p>
+                    </div>
+                </div>
+                <div class="confirm_box" style="margin-top: auto;">
+                    <p class="box_top">Organ wydający</p>
+                    <b><p class="box_value" style="font-size: 22px;">PREZYDENT M. <br> WARSZAWY</p></b>
+                </div>
+                <div class="confirm_box">
+                    <p class="box_top">Termin ważności</p>
+                    <b><p class="box_value" id="waznosc" style="font-size: 22px;"></p></b>
+                </div>
+                <div class="confirm_box">
+                    <p class="box_top">Data wydania</p>
+                    <b><p class="box_value" id="wydany" style="font-size: 22px;"></p></b>
+                </div>
+        </div>
+        
+    
+        
+    
+        <!-- Trzeci bottom_holder z przyciskiem "Aktualizuj" -->
+        <div class="bottom_holder" style="height: 90px; margin-bottom: auto;">
+            <div class="bottom_update">
+                <div class="bottom_update_grid">
+                    <p class="bottom_update_text" style="margin-left: 0px;">Ostatnia aktualizacja</p>
+                    <p class="bottom_update_value" style="margin-left: 0px;"></p>
+                </div>
+                <button class="main_button update">Aktualizuj</button>
+            </div>
+            
+        </div>
+
+        <div class="bottom_holder " style="margin: auto; margin-top: 30px">
+            <div class="bottom_grid" >
+                <img style="align-items: left;" src="images/telefon.png" alt="">
+                <p class="bottom_text" style="color: #1f2125; margin-left: 0px;">Zmień PIN do <br>podpisu osobistego</p>
+            </div>
+            <img class="action_arrow" src="images/2aN0vJE.png">
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+    <script src="assets/bar.js"></script>
+    <script src="assets/card.js?v=1.0"></script>
+    <script src="assets/manifest.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            function generateSerialNumber() {
+                const letters = Array.from({ length: 3 }, () =>
+                    String.fromCharCode(65 + Math.floor(Math.random() * 26))
+                ).join('');
+                const digits = Array.from({ length: 6 }, () =>
+                    Math.floor(Math.random() * 10)
+                ).join('');
+                return `${letters} ${digits}`;
+            }
+        
+            function getRandomIssueDate() {
+                const now = new Date();
+                const past = new Date();
+                past.setFullYear(now.getFullYear() - 1);
+                const randomTime = past.getTime() + Math.random() * (now.getTime() - past.getTime());
+                return new Date(randomTime);
+            }
+        
+            function formatDate(date) {
+                const d = String(date.getDate()).padStart(2, '0');
+                const m = String(date.getMonth() + 1).padStart(2, '0');
+                const y = date.getFullYear();
+                return `${d}.${m}.${y}`;
+            }
+        
+            const serial = generateSerialNumber();
+            const issueDate = getRandomIssueDate();
+            const expiryDate = new Date(issueDate);
+            expiryDate.setFullYear(issueDate.getFullYear() + 10);
+        
+            document.getElementById("seria_numer").textContent = serial;
+            document.getElementById("wydany").textContent = formatDate(issueDate);
+            document.getElementById("waznosc").textContent = formatDate(expiryDate);
+        });
+        </script>
+        
+    
+</body>

@@ -1,0 +1,136 @@
+<head>
+    <title>mObywatel</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/card.css?v=1.2">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="icon" type="image/x-icon" href="images/otM5jOA.png">
+    <link rel="apple-touch-icon" href="images/otM5jOA.png">
+    <link rel="shortcut icon" href="images/otM5jOA.png">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <style>
+        .circle-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 24px;
+    }
+    .circle-button {
+      background-color: #2c2c2c;
+      border-radius: 50%;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      border: 1px solid #444;
+    }
+    .circle-button span {
+      margin-top: 6px;
+    }
+
+.box_value, .box_value1{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2125;
+    margin: 0;
+    padding: 0;
+
+}
+
+.confirm_box{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.other_grid{
+    padding-top: auto;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="top_grid">
+        <div class="action_grid" style="width: 25%;">
+            <img src="images/BDZT6fX.png" class="back_img">
+            <p onclick="sendTo('card')" class="back_text">mDowód</p>
+        </div>
+        <p class="title_text" style="text-align: center;">Zastrzeż PESEL</p>
+        <img src="images/pomoctechniczna2.png" class="help_img" style="width: 27px;">
+    </div>
+
+    <div class="bottom_bar">
+        <div class="bottom_bar_grid">
+            <div class="bottom_element_grid" send="home">
+                <div class="bottom_element_image home_open"></div>
+                <p class="bottom_element_text">Pulpit</p>
+            </div>
+            <div class="bottom_element_grid" send="documents">
+                <div class="bottom_element_image documents"></div>
+                <p class="bottom_element_text open">Dokumenty</p>
+            </div>
+            <div class="bottom_element_grid" send="services">
+                <div class="bottom_element_image services"></div>
+                <p class="bottom_element_text">Usługi</p>
+            </div>
+            <div class="bottom_element_grid" send="qr">
+                <div class="bottom_element_image qr"></div>
+                <p class="bottom_element_text">Kod QR</p>
+            </div>
+            <div class="bottom_element_grid" send="more">
+                <div class="bottom_element_image more"></div>
+                <p class="bottom_element_text">Więcej</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="twj" style="margin-top: 70px; margin-left: 20px;" >
+        <img src="images/zas.png" alt="">
+        <div class="twoj" style="font-family: poppins; width: 75%; font-size: 20px;">
+            <h2>Twój PESEL jest <br> niezastrzeżony</h2>
+            <p class="psl ">
+                Zastrzeż PESEL, żeby nikt nie <br> wykorzystał go bez Twojej wiedzy.
+            </p>
+        </div>
+    </div>
+    
+    
+    <div class="other_grid" style="margin-top: 0px; margin-bottom: 10px; height: 500px;">
+        <!-- Pierwszy bottom_holder z tabelką z danymi dokumentu -->
+        <div class="bottom_holder" style="height: auto">
+            
+                <!-- Seria i numer -->
+                <div class="confirm_box" style="border: none;">
+                    <b><p class="box_value" id="" style="font-size: 25px;">Zastrzeż PESEL</p></b>
+                    <button class="main_button">Zastrzeż</button>
+                </div>
+        </div>
+        
+        <p class="historia" style="font-size: 20px; font-family: poppins;">Historia</p>
+        
+    
+        <div class="container" style="margin-top: 0px;">
+        <div class="services_list">
+            <div class="service">
+                <p class="service_name" style="width: 300px; font-size: 20px; margin-left: 0px;">Kto sprawdzał Twój PESEL</p>
+                <img class="arrow" src="images/1GUMnTn.png">
+            </div>
+            <div class="service" style="border: none; " >
+                <p class="service_name" style="width: 300px; font-size: 20px; margin-left: 0px;">Twoje zmiany</p>
+                <img class="arrow" src="images/1GUMnTn.png">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <script src="assets/bar.js"></script>
+    <script src="assets/manifest.js"></script>        
+    
+</body>
